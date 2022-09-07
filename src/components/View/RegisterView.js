@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Container from '../Container/Container';
 import s from './Form.module.css';
-import sBtn from '../../App.module.css';
+import sBtn from '../../Btn.module.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { AuthOperations, AuthSelector } from 'redux/auth';
@@ -69,7 +69,7 @@ export default function RegisterView() {
                   Sign up
                </button>
             </div>
-            <NavLink to="/login">To login form.</NavLink>
+            <NavLink to="/login">To login form</NavLink>
          </form>
       </Container>
    );

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import s from './ContactItem.module.css';
-import sBtn from '../../../App.module.css';
+import sBtn from '../../../Btn.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { ContactsOperations, ContactsSelectors } from 'redux/contacts';
 import { toast } from 'react-toastify';

@@ -1,5 +1,5 @@
 import React from 'react';
-import sBtn from '../../App.module.css';
+import sBtn from '../../Btn.module.css';
 import s from './UserMenu.module.css';
 import defaultAvatar from '../../images/default-avatar.png';
 import { useSelector, useDispatch } from 'react-redux';

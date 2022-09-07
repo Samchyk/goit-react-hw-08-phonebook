@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import s from './ContactForm.module.css';
-import sBtn from '../../App.module.css';
+import sBtn from '../../Btn.module.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,7 +19,7 @@ export default function ContactForm() {
       if (
          contacts.find(
             contact =>
-               contact.name.toLocaleLowerCase() === name.toLocaleLowerCase()
+               contact.name?.toLowerCase() === name?.toLowerCase()
          )
       ) {
          toast.warning(`${name} is alredy in contacts`);
