@@ -1,22 +1,18 @@
-import PropTypes from 'prop-types';
 import s from './Filter.module.css';
+import { useState } from 'react';
 
-export default function Filter({ filter, onChange }) {
-   return (
-      <label className={s.label}>
-         Find contact by name
-         <input
-            type="text"
-            name="filter"
-            placeholder="Enter some letters to search"
-            value={filter}
-            onChange={e => onChange(e.target.value)}
-         />
-      </label>
-   );
+export default function Filter() {
+  const [filter, setFilter] = useState('');
+  return (
+    <label className={s.label}>
+      Find contact by name
+      <input
+        type="text"
+        name="filter"
+        placeholder="Enter some letters to search"
+        value={filter}
+        onChange={setFilter}
+      />
+    </label>
+  );
 }
-
-Filter.propTypes = {
-   filter: PropTypes.string.isRequired,
-   onChange: PropTypes.func.isRequired,
-};

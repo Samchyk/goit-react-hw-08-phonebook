@@ -25,6 +25,12 @@ export default function UserMenu() {
             >
                logout
             </button>
+            <button
+               type="button"
+               onClick={() => dispatch(AuthOperations.logOut())}
+            >
+               logout
+            </button>
          </div>
       </div>
    );
