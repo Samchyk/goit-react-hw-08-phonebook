@@ -1,8 +1,9 @@
 import s from './Filter.module.css';
-import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-export default function Filter() {
-  const [filter, setFilter] = useState('');
+
+export default function Filter({filter, onChange}) {
+ 
   return (
     <label className={s.label}>
       Find contact by name
@@ -11,8 +12,13 @@ export default function Filter() {
         name="filter"
         placeholder="Enter some letters to search"
         value={filter}
-        onChange={setFilter}
+        onChange={e => onChange(e.target.value)}
       />
     </label>
   );
 }
+
+Filter.propTypes = {
+   filter: PropTypes.string.isRequired,
+   onChange: PropTypes.func.isRequired,
+};
